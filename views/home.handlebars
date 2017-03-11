@@ -1,0 +1,25 @@
+<div class="page-header">
+	<h3>All Students</h3>
+</div>
+<table class="table">
+	<thead>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Mobile</th>
+		<th>Action</th>
+	</thead>
+
+	<tbody>
+		{{#each students}}
+			<tr>
+				<td>{{ this.id }}</td>
+				<td>{{ this.name }}</td>
+				<td>{{ this.email }}</td>
+				<td>{{ this.mobile }}</td>
+				<td></td>
+			</tr>
+		{{/each}}
+	</tbody>
+
+</table
