@@ -68,7 +68,7 @@ app.get('/', function(req, res){
 
 	    if (error) throw error;
 
-		res.render('students/home', {students: results});
+		res.render('students/home', {students: results, data: '<p>Hello world</p>'});
 	  });
 	});
 
@@ -251,3 +251,30 @@ app.use(function(req, res) {
 app.listen(app.get('port'), function() {
 	console.log('express');
 });
+
+// var app = require('express')();
+// var http = require('http').Server(app);
+// var io = require('socket.io')(http);
+
+// app.get('/', function(req, res){
+//   // res.sendFile(__dirname + '/test.html');
+//   res.render('test');
+// });
+
+// io.on('connection', function(socket){
+//   console.log('a user connected');
+  
+//   socket.on('disconnect', function(){
+//     console.log('user disconnected');
+//   });
+
+//   socket.on('chat message', function(msg){
+//     io.emit('chat message', msg);
+//     console.log('message: ' + msg);
+//   });
+
+// });
+
+// http.listen(3000, function(){
+//   console.log('listening on *:3000');
+// });
